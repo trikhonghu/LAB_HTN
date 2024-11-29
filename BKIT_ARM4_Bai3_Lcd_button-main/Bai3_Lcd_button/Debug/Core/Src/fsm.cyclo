@@ -1,0 +1,3 @@
+../Core/Src/fsm.c:15:6:blink_light	8
+../Core/Src/fsm.c:49:6:show_frequency	1
+../Core/Src/fsm.c:54:6:traffic_lights_operation	17

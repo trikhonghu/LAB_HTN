@@ -1,0 +1,10 @@
+../Core/Src/fsm_traffic.c:10:6:draw_filled_retangle	1
+../Core/Src/fsm_traffic.c:14:6:off_state	1
+../Core/Src/fsm_traffic.c:19:6:red_state	1
+../Core/Src/fsm_traffic.c:24:6:yellow_state	1
+../Core/Src/fsm_traffic.c:29:6:green_state	1
+../Core/Src/fsm_traffic.c:34:6:left_light	5
+../Core/Src/fsm_traffic.c:48:6:right_light	5
+../Core/Src/fsm_traffic.c:63:6:left_light_mode1	8
+../Core/Src/fsm_traffic.c:91:6:right_light_mode1	8
+../Core/Src/fsm_traffic.c:120:6:traffic_lights	1

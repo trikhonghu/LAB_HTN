@@ -1,0 +1,4 @@
+../Core/Src/fsm_mode.c:15:5:is_touch_alarm	6
+../Core/Src/fsm_mode.c:26:6:displayTime	1
+../Core/Src/fsm_mode.c:41:6:off_all	1
+../Core/Src/fsm_mode.c:51:6:fsm_machine_mode	18

@@ -1,0 +1,4 @@
+../Core/Src/note.c:87:6:buzzer_start_freq	3
+../Core/Src/note.c:107:6:stop_buzzer	1
+../Core/Src/note.c:111:6:play_note	2
+../Core/Src/note.c:121:6:play_note_in_main	3
