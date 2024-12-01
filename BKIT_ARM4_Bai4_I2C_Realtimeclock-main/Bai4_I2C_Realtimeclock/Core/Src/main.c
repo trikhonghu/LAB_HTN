@@ -129,8 +129,8 @@ int main(void)
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
   system_init();
-  touch_Adjust();
-  lcd_Clear(BLACK);
+//  touch_Adjust();
+//  lcd_Clear(BLACK);
 //  play_note(note, dur, (int)sizeof(dur)/4);
   /* USER CODE END 2 */
 
@@ -141,18 +141,18 @@ int main(void)
 	  //scan touch screen
 	  touch_Scan();
 	  //check if touch screen is touched
-	  if(touch_IsTouched() && draw_Status == DRAW){
-            //draw a point at the touch position
-		  lcd_DrawPoint(touch_GetX(), touch_GetY(), RED);
-	  }
+//	  if(touch_IsTouched() && draw_Status == DRAW){
+//            //draw a point at the touch position
+//		  lcd_DrawPoint(touch_GetX(), touch_GetY(), RED);
+//	  }
 //	  // 50ms task
 	  if(flag_timer2 == 1){
 		  flag_timer2 = 0;
-		  touchProcess();
+//		  touchProcess();
 		  test_LedDebug();
 //		  led7_SetDigit(isButtonClear(), 0, 0);
 		  button_Scan();
-//		  fsm_machine_mode(mode);
+		  fsm_machine_mode(mode);
 		  test_button();
 	  }
 
@@ -239,7 +239,7 @@ void system_init(){
 	  lcd_StrCenter(0,2,"NORMAL_MODE",WHITE,BLUE,16,1);
 	  lcd_ShowPicture(20, 235, 50, 50, bell_sign);
 	  lcd_ShowStr(0, 280, "Alarm OFF", WHITE, BLACK, 24, 0);
-	  lcd_Clear(BLACK);
+//	  lcd_Clear(BLACK);
 	  alarm_state = 0;
 }
 

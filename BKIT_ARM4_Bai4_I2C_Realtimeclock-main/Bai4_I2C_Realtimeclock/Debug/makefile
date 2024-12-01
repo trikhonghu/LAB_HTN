@@ -34,37 +34,37 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Bai4_I2C_Realtimeclock
+BUILD_ARTIFACT_NAME := Bai4_I2C_Realtimeclock_draft
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-Bai4_I2C_Realtimeclock.elf \
+Bai4_I2C_Realtimeclock_draft.elf \
 
 MAP_FILES += \
-Bai4_I2C_Realtimeclock.map \
+Bai4_I2C_Realtimeclock_draft.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-Bai4_I2C_Realtimeclock.list \
+Bai4_I2C_Realtimeclock_draft.list \
 
 OBJCOPY_HEX += \
-Bai4_I2C_Realtimeclock.hex \
+Bai4_I2C_Realtimeclock_draft.hex \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: Bai4_I2C_Realtimeclock.elf secondary-outputs
+main-build: Bai4_I2C_Realtimeclock_draft.elf secondary-outputs
 
 # Tool invocations
-Bai4_I2C_Realtimeclock.elf Bai4_I2C_Realtimeclock.map: $(OBJS) $(USER_OBJS) D:\Desktop\lab_htn\BKIT_ARM4_Bai4_I2C_Realtimeclock-main\Bai4_I2C_Realtimeclock\STM32F407ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Bai4_I2C_Realtimeclock.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Desktop\lab_htn\BKIT_ARM4_Bai4_I2C_Realtimeclock-main\Bai4_I2C_Realtimeclock\STM32F407ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bai4_I2C_Realtimeclock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Bai4_I2C_Realtimeclock_draft.elf Bai4_I2C_Realtimeclock_draft.map: $(OBJS) $(USER_OBJS) D:\Desktop\lab_htn\BKIT_ARM4_Bai4_I2C_Realtimeclock-main\Bai4_I2C_Realtimeclock\STM32F407ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Bai4_I2C_Realtimeclock_draft.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Desktop\lab_htn\BKIT_ARM4_Bai4_I2C_Realtimeclock-main\Bai4_I2C_Realtimeclock\STM32F407ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bai4_I2C_Realtimeclock_draft.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -73,19 +73,19 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Bai4_I2C_Realtimeclock.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Bai4_I2C_Realtimeclock.list"
+Bai4_I2C_Realtimeclock_draft.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Bai4_I2C_Realtimeclock_draft.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Bai4_I2C_Realtimeclock.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "Bai4_I2C_Realtimeclock.hex"
+Bai4_I2C_Realtimeclock_draft.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "Bai4_I2C_Realtimeclock_draft.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Bai4_I2C_Realtimeclock.elf Bai4_I2C_Realtimeclock.hex Bai4_I2C_Realtimeclock.list Bai4_I2C_Realtimeclock.map default.size.stdout
+	-$(RM) Bai4_I2C_Realtimeclock_draft.elf Bai4_I2C_Realtimeclock_draft.hex Bai4_I2C_Realtimeclock_draft.list Bai4_I2C_Realtimeclock_draft.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX)
